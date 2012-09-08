@@ -12,9 +12,17 @@
  */
 
 return array(
+    'db' => array(
+        'driver'         => 'Pdo',
+        'dsn'            => 'mysql:dbname=mms-mc;host=localhost',
+        'driver_options' => array(
+            PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+        ),
+    ),
     'service_manager' => array(
         'factories' => array(
-            'Navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory'
+            'Navigation'              => 'Zend\Navigation\Service\DefaultNavigationFactory',
+            'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory',
         ),
     ),
     'navigation' => array(
@@ -24,6 +32,16 @@ return array(
             'home' => array(
                 'label' => 'Home',
                 'route' => 'home',
+            ),
+            array(
+                'label' => 'Admin',
+                'route' => 'admin',
+                'pages' => array(
+                    array(
+                        'label'      => 'Rules',
+                        'controller' => 'rules',
+                    ),
+                ),
             ),
         ),
     ),
