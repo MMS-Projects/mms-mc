@@ -6,7 +6,7 @@ php:
   - 5.4
 
 script:
-  - php ./public/index.php
+  - sh ./tests/travis/test.sh
 
 notifications:
   irc: "irc.mms-projects.net#mms-dev"
