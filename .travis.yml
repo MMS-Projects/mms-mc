@@ -5,6 +5,9 @@ php:
   - 5.3
   - 5.4
 
+script:
+  - php ./public/index.php
+
 notifications:
   irc: "irc.mms-projects.net#mms-dev"
   email: false
