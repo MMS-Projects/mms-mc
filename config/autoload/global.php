@@ -12,5 +12,19 @@
  */
 
 return array(
-    // ...
+    'service_manager' => array(
+        'factories' => array(
+            'Navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory'
+        ),
+    ),
+    'navigation' => array(
+        // The DefaultNavigationFactory we configured in (1) uses 'default' as the sitemap key
+        'default' => array(
+            // And finally, here is where we define our page hierarchy
+            'home' => array(
+                'label' => 'Home',
+                'route' => 'home',
+            ),
+        ),
+    ),
 );
