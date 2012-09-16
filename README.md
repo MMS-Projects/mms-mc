@@ -1,5 +1,7 @@
-ZendSkeletonApplication
+MMS-MC Web
 =======================
+
+[![Build Status](https://secure.travis-ci.org/MMS-Projects/mms-mc.png)](http://travis-ci.org/MMS-Projects/mms-mc)
 
 Introduction
 ------------
