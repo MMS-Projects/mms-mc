@@ -35,7 +35,7 @@ class RuleTable extends AbstractTableGateway
         return $row;
     }
 
-    public function saveAlbum(Rule $rule)
+    public function saveRule(Rule $rule)
     {
         $data = array(
             'rule'    => $rule->rule,
@@ -53,7 +53,7 @@ class RuleTable extends AbstractTableGateway
         }
     }
 
-    public function deleteAlbum($id)
+    public function deleteRule($id)
     {
         $this->delete(array('id' => $id));
     }
